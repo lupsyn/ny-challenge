@@ -1,24 +1,16 @@
-# compose-android-template 🤖
+# NY-challenge 🤖
 
-A simple Github template that lets you create an **Android/Kotlin** project and be up and running in a **few seconds**. 
+## Challenge
+Build an Android application that allows a user to enter an organization name and then displays the top 3 most popular (by stars) repositories on GitHub for that organization.   A user should be able to click on one of the Repos and navigate to it within a webview or chrome custom tabs.
+You can find details on the API here: https://developer.github.com/v3/
 
-This template is focused on delivering a project with solid architecture and **continuous integration** already in place.
-
-## How to use 👣
-
-Just click on [![Use this template](https://img.shields.io/badge/-Use%20this%20template-brightgreen)](https://github.com/lupsyn/compose-android-template/generate) button to create a new repo starting from this template.
-
-Once created don't forget to update the:
-- App id
-- AndroidManifest
-- Package of the source files
 
 ## Features 🎨
 
-- **100% Kotlin-only template**.
-- Dependecy injection with Koin already in place  
+- **100% Kotlin-only**.
+- Dependecy injection with Koin
 - Data, domain, libraries and feature module
-- Sample Compose UI test
+- Compose UI
 - 100% Gradle Kotlin DSL setup.
 - CI Setup with GitHub Actions
 - Dependency versions managed via `buildSrc`.
@@ -26,28 +18,19 @@ Once created don't forget to update the:
 - Issues Template (bug report + feature request).
 - Pull Request Template.
 
-## Gradle Setup 🐘
+## 🏛 Architecture
 
-This template is using [**Gradle Kotlin DSL**](https://docs.gradle.org/current/userguide/kotlin_dsl.html) as well as the [Plugin DSL](https://docs.gradle.org/current/userguide/plugins.html#sec:plugins_block) to setup the build.
+Let's take a look in each major module of the application:
 
-## Static Analysis 🔍
+* **app** - The Application module. It contains all the initialization logic for the Android
+  environment and starts the _Jetpack Navigation Compose Graph_.
+* **features** - The module/folder containing all the features (visual or not) from the application
+* **domain** - The modules containing the most important part of the application: the business
+  logic. This module depends only on itself and all interaction it does is via _dependency
+  inversion_.
+* **data** - The module containing the data (local, remote etc) from the app
 
-This template is using [**ktlint**](https://github.com/pinterest/ktlint) with the [ktlint-gradle](https://github.com/jlleitschuh/ktlint-gradle) plugin to format your code. To reformat all the source code as well as the buildscript you can run the `ktlintFormat` gradle task.
+To better represents the idea behind the modules, here is a architecture image representing the flow
+of dependency:
 
-## CI ⚙️
-
-This template is using [**GitHub Actions**](https://github.com/lupsyn/compose-android-template/actions) as CI. You don't need to setup any external service and you should have a running CI once you start using this template.
-
-There are currently the following workflows available:
-- [Validate Gradle Wrapper](.github/workflows/gradle-wrapper-validation.yml) - Will check that the gradle wrapper has a valid checksum
-- [Pre Merge Checks](.github/workflows/pre-merge.yaml) - Will run the `build`, `check` and `publishToMavenLocal` tasks.
-
-## Contributing 🤝
-
-Feel free to open a issue or submit a pull request for any bugs/improvements.
-
-This repo takes inspiration from https://github.com/cortinico/kotlin-android-template 
-
-
-
-
+![NY-challenge](assets/)

@@ -4,7 +4,7 @@ import androidx.compose.ui.test.junit4.createComposeRule
 import androidx.compose.ui.test.onNodeWithText
 import androidx.test.platform.app.InstrumentationRegistry
 import com.ebdz.designsystem.Theme
-import com.ebdz.preference.presentation.PreferenceSection
+import com.ebdz.preference.presentation.PreferenceScreen
 import org.junit.Rule
 import org.junit.Test
 
@@ -31,7 +31,7 @@ internal class PreferenceSectionTest {
     private fun loadView() {
         composeTestRule.setContent {
             Theme {
-                PreferenceSection(onAboutClick = { })
+                PreferenceScreen(onAboutClick = { })
             }
         }
     }

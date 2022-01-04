@@ -1,8 +1,12 @@
 include(":app")
 include(":features:preference")
+include(":features:search")
+
 include(":domain")
+
 include(":data:repository")
-include(":data:local")
+include(":data:network")
+
 include(":libraries:core")
 include(":libraries:test")
 include(":libraries:designsystem")

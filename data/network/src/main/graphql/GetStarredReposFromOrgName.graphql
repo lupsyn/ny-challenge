@@ -1,0 +1,17 @@
+query GetStarredRepositoriesFromOrganizationName($queryString: String!) {
+    search(query: $queryString,
+        type: REPOSITORY,
+        first: 3) {
+        edges{
+            node {
+                ... on Repository {
+                    id
+                    name
+                    openGraphImageUrl
+                    stargazerCount
+                    url
+                    shortDescriptionHTML
+                }
+            }
+        }}
+}

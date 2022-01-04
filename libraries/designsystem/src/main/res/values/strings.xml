@@ -2,4 +2,11 @@
 <resources>
     <string name="back_arrow_content_description">Back</string>
     <string name="error_description">An error occurred</string>
+    <string name="LoadingScreenContentDescriptionLabel">Loading screen</string>
+    <string name="ErrorScreenIconButton">Error screen</string>
+
+    <string name="icn_search_view_demo_app_bar_search">Search Users</string>
+    <string name="icn_search_back_content_description">Exit Search View</string>
+    <string name="icn_search_clear_content_description">Clear Search</string>
+    <string name="icn_user_detail_app_bar_back_button">Navigate back</string>
 </resources>

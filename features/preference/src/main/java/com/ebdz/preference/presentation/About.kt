@@ -44,8 +44,12 @@ import java.util.Locale
  * About screen.
  */
 @Composable
-fun About(onUpPress: () -> Unit) {
+fun AboutScreen(
+    onUpPress: () -> Unit,
+    modifier: Modifier = Modifier,
+) {
     Scaffold(
+        modifier = modifier,
         topBar = { Toolbar(onUpPress = onUpPress) },
         content = { AboutContent() }
     )
@@ -112,12 +116,12 @@ private fun ContentCallToAction() {
     }
 }
 
-private const val PROJECT_URL = "https://github.com/lupsyn/compose-template"
+private const val PROJECT_URL = "https://github.com/lupsyn/"
 
 @Preview
 @Composable
 fun AboutPreview() {
     Theme {
-        About(onUpPress = { })
+        AboutScreen(onUpPress = { })
     }
 }

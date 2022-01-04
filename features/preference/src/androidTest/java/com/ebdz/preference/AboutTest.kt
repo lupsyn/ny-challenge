@@ -4,7 +4,7 @@ import androidx.compose.ui.test.junit4.createComposeRule
 import androidx.compose.ui.test.onNodeWithText
 import androidx.test.platform.app.InstrumentationRegistry
 import com.ebdz.designsystem.Theme
-import com.ebdz.preference.presentation.About
+import com.ebdz.preference.presentation.AboutScreen
 import org.junit.Rule
 import org.junit.Test
 
@@ -33,7 +33,7 @@ internal class AboutTest {
     private fun loadView() {
         composeTestRule.setContent {
             Theme {
-                About(onUpPress = { })
+                AboutScreen(onUpPress = { })
             }
         }
     }

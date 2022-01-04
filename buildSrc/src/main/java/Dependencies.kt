@@ -1,7 +1,7 @@
 object Releases {
-    const val versionAppId = "com.ebdz.compose"
+    const val versionAppId = "com.ebdz.compose.nychallenge"
     const val versionCode = 10000
-    const val versionName = "2.0.0"
+    const val versionName = "1.0.0"
 }
 
 object Versions {
@@ -37,6 +37,10 @@ object Versions {
     const val composeNav = "2.4.0-alpha09"
     const val composeVm = "2.4.0-beta01"
     const val composeActivity = "1.4.0-alpha02"
+    const val accompanistInsets = "0.22.0-rc"
+
+    const val okHttp = "4.9.1"
+    const val apollo = "3.0.0"
 
     const val ktlint = "0.42.1"
     const val detekt = "1.17.1"
@@ -49,6 +53,7 @@ object Deps {
     val coroutines = CoroutinesDeps
     val koin = KoinDeps
     val compose = ComposeDeps
+    val network = NetworkDeps
     val test = TestDeps
     val quality = QualityDeps
 }
@@ -91,6 +96,21 @@ object ComposeDeps {
     const val uiTest = "androidx.compose.ui:ui-test:${Versions.compose}"
     const val junit4 = "androidx.compose.ui:ui-test-junit4:${Versions.compose}"
     const val manifest = "androidx.compose.ui:ui-test-manifest:${Versions.compose}"
+    const val accompanistInset =
+        "com.google.accompanist:accompanist-insets:${Versions.accompanistInsets}"
+
+    const val coil = "io.coil-kt:coil-compose:1.4.0"
+}
+
+object NetworkDeps {
+    const val okHttp = "com.squareup.okhttp3:okhttp:${Versions.okHttp}"
+    const val okHttpLoggingInterceptors =
+        "com.squareup.okhttp3:logging-interceptor:${Versions.okHttp}"
+
+    const val apolloHttCcache = "com.apollographql.apollo3:apollo-http-cache:${Versions.apollo}"
+    const val apolloNormalizedCache =
+        "com.apollographql.apollo3:apollo-normalized-cache:${Versions.apollo}"
+    const val apolloRuntime = "com.apollographql.apollo3:apollo-runtime:${Versions.apollo}"
 }
 
 object TestDeps {

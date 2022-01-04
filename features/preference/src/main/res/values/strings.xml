@@ -2,10 +2,9 @@
 <resources>
     <string name="preference_title_about">About</string>
     <string name="preference_title_version">Version</string>
-    <string name="preference_title_tracker">Task Tracker</string>
 
-    <string name="about_description">Your app description!</string>
+    <string name="about_description">Build an Android application that allows a user to enter an organization name and then displays the top 3 most popular (by stars) repositories on GitHub for that organization.   A user should be able to click on one of the Repos and navigate to it within a webview or chrome custom tabs.
+You can find details on the API here: https://developer.github.com/v3/</string>
     <string name="about_button_project">Visit project on GitHub</string>
     <string name="about_cd_github" translatable="false">GitHub</string>
-
 </resources>

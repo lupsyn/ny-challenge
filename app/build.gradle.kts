@@ -66,7 +66,7 @@ dependencies {
     implementation(projects.libraries.core)
     implementation(projects.libraries.designsystem)
     implementation(projects.libraries.navigation)
-    implementation(projects.data.local)
+    implementation(projects.data.network)
     implementation(projects.data.repository)
     implementation(projects.domain)
 
@@ -77,9 +77,11 @@ dependencies {
     implementation(Deps.koin.android)
     implementation(Deps.android.splashScreen)
 
-    implementation(projects.features.preference)
-
     addComposeDependencies()
+
+    implementation(projects.features.preference)
+    implementation(projects.features.search)
+
     debugImplementation(Deps.compose.manifest)
 }
 

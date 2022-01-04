@@ -7,4 +7,5 @@ object GradlePlugin {
     const val COMPOSE = "gradle.android-compose"
     const val PARCELIZE = "kotlin-parcelize"
     const val KAPT = "kotlin-kapt"
+    const val APOLLO = "com.apollographql.apollo3"
 }

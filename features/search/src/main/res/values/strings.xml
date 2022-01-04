@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="search_content_description">Make a search on Github archive!</string>
+    <string name="no_content_description">You have no results!\n Try with another organization name!</string>
+    <string name="error">Ups! an error occurred,\nplease click on icon to retry!</string>
+    <string name="search_place_holder">Search repositories…</string>
+</resources>
