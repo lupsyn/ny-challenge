@@ -46,6 +46,7 @@ private fun RepositoryRow(
 
         Column(modifier = Modifier.padding(end = 16.dp)) {
             Text(repository.name)
+            Text("Stars : ${repository.stargazerCount}")
             Text(repository.shortDescriptionHTML)
         }
     }
