@@ -33,4 +33,4 @@ Let's take a look in each major module of the application:
 To better represents the idea behind the modules, here is a architecture image representing the flow
 of dependency:
 
-![NY-challenge](assets/)
+![NY-challenge](assets/arch.png)
