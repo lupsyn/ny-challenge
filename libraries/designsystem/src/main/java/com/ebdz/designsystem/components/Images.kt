@@ -42,7 +42,7 @@ fun NetworkImageRoundedIcon(url: String, modifier: Modifier) {
                 crossfade(true)
             }
         ),
-        contentDescription = null,
+        contentDescription = url,
         modifier = modifier
     )
 }

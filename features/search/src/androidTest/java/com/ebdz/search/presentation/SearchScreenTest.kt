@@ -5,28 +5,20 @@ import com.ebdz.search.utils.BaseAndroidComposeTest
 import org.junit.Test
 
 class SearchScreenTest : BaseAndroidComposeTest() {
-
-    @Test
-    fun test_loadingScreenIsDisplayed() {
-        withSearchScreenRobot {
-            composeTestRule.mainClock.autoAdvance = false
-            composeTestRule.mainClock.advanceTimeByFrame()
-
-            whenViewIsLoaded()
-
-//            // TODO : not deterministic idling resources should be used here!
-//            composeTestRule.mainClock.advanceTimeBy(200L)
-
-            thenLoadingScreenHasVisibility()
-        }
-    }
-
     @Test
     fun test_shouldDisplayContent() {
         withSearchScreenRobot {
-            returnContent()
+            givenRepositoryReturnContent()
+
             whenViewIsLoaded()
-            thenContentScreenHasVisibility()
+
+            thenContentDescriptionIsDisplayed()
+
+            makeSearchWithValue("A search")
+
+            thenContentIsDisplayed()
+            thenNoContentIsDisplayed(false)
+            thenErrorScreenHasVisibility(false)
         }
     }
 
@@ -37,9 +29,26 @@ class SearchScreenTest : BaseAndroidComposeTest() {
 
             whenViewIsLoaded()
 
-            thenLoadingScreenHasVisibility(false)
-            thenContentScreenHasVisibility(false)
-            thenErrorScreenHasVisibility(true)
+            makeSearchWithValue("A search")
+
+            thenContentIsDisplayed(false)
+            thenNoContentIsDisplayed(false)
+            thenErrorScreenHasVisibility()
+        }
+    }
+
+    @Test
+    fun test_shouldDisplayNoContent() {
+        withSearchScreenRobot {
+            givenRepositoryIsReturningNoContent()
+
+            whenViewIsLoaded()
+
+            makeSearchWithValue("A search")
+
+            thenContentIsDisplayed(false)
+            thenErrorScreenHasVisibility(false)
+            thenNoContentIsDisplayed()
         }
     }
 }

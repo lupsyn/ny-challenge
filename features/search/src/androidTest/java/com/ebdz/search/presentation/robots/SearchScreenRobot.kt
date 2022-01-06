@@ -8,10 +8,10 @@ import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.test.assertIsDisplayed
 import androidx.compose.ui.test.junit4.AndroidComposeTestRule
 import androidx.compose.ui.test.onNodeWithContentDescription
-import androidx.compose.ui.test.onNodeWithTag
+import androidx.compose.ui.test.onNodeWithText
 import androidx.test.ext.junit.rules.ActivityScenarioRule
-import com.ebdz.core.extension.openUrl
 import com.ebdz.designsystem.Theme
+import com.ebdz.search.R
 import com.ebdz.search.fake.SearchViewModelFake
 import com.ebdz.search.presentation.SearchScreen
 import com.ebdz.search.utils.BaseAndroidComposeTest
@@ -34,6 +34,10 @@ internal class SearchScreenRobot(
 ) : BaseRobotScreen(
     baseAndroidComposeTest
 ) {
+
+    lateinit var searchContentDescription: String
+    lateinit var noContentDescription: String
+
     @Before
     fun setup() {
         searchVIewModel.clean()
@@ -44,6 +48,8 @@ internal class SearchScreenRobot(
     fun whenViewIsLoaded() =
         composeTestRule.setContent {
             Theme {
+                searchContentDescription = stringResource(id = R.string.search_content_description)
+                noContentDescription = stringResource(id = R.string.no_content_description)
                 SearchScreen(
                     searchViewModel = searchVIewModel,
                     modifier = Modifier.testTag(SCREEN_TEST_TAG),
@@ -53,30 +59,37 @@ internal class SearchScreenRobot(
             }
         }
 
-    fun returnContent() {
-        searchVIewModel.isReturningContent()
+    fun makeSearchWithValue(searchTxt: String) {
+        searchVIewModel.onSearchTextChanged(searchTxt)
+        searchVIewModel.onLaunchSearch()
     }
 
-    fun givenRepositoryReturnError() {
-        searchVIewModel.isReturningError()
-    }
+    fun givenRepositoryReturnContent() = searchVIewModel.isReturningContent()
 
-    fun thenContentScreenHasVisibility(displayed: Boolean = true) {
+    fun givenRepositoryReturnError() = searchVIewModel.isReturningError()
+
+    fun givenRepositoryIsReturningNoContent() = searchVIewModel.isReturningNoContent()
+
+    fun thenContentIsDisplayed(displayed: Boolean = true) {
         if (displayed) {
-            composeTestRule.onNodeWithTag(SCREEN_TEST_TAG)
+            composeTestRule.onNodeWithText("name")
+                .assertIsDisplayed()
+            composeTestRule.onNodeWithText("shortDescriptionHTML")
                 .assertIsDisplayed()
         } else {
-            composeTestRule.onNodeWithContentDescription(label = SCREEN_TEST_TAG)
+            composeTestRule.onNodeWithText("name")
+                .assertDoesNotExist()
+            composeTestRule.onNodeWithText("shortDescriptionHTML")
                 .assertDoesNotExist()
         }
     }
 
-    fun thenLoadingScreenHasVisibility(displayed: Boolean = true) {
+    fun thenContentDescriptionIsDisplayed(displayed: Boolean = true) {
         if (displayed) {
-            composeTestRule.onNodeWithContentDescription(label = "Loading screen")
+            composeTestRule.onNodeWithText(searchContentDescription)
                 .assertIsDisplayed()
         } else {
-            composeTestRule.onNodeWithContentDescription(label = "Loading screen")
+            composeTestRule.onNodeWithText(searchContentDescription)
                 .assertDoesNotExist()
         }
     }
@@ -87,6 +100,16 @@ internal class SearchScreenRobot(
                 .assertIsDisplayed()
         } else {
             composeTestRule.onNodeWithContentDescription(label = "Error screen")
+                .assertDoesNotExist()
+        }
+    }
+
+    fun thenNoContentIsDisplayed(displayed: Boolean = true) {
+        if (displayed) {
+            composeTestRule.onNodeWithText(noContentDescription)
+                .assertIsDisplayed()
+        } else {
+            composeTestRule.onNodeWithText(noContentDescription)
                 .assertDoesNotExist()
         }
     }

@@ -17,6 +17,10 @@ class SearchViewModelFake : SearchViewModel(
         (getListOfRepositoriesUseCase as GetListOfRepositoriesUseCaseFake).shouldReturnError()
     }
 
+    fun isReturningNoContent(){
+        (getListOfRepositoriesUseCase as GetListOfRepositoriesUseCaseFake).shouldReturnNoContent()
+    }
+
     fun clean() {
         (getListOfRepositoriesUseCase as GetListOfRepositoriesUseCaseFake).clean()
     }
