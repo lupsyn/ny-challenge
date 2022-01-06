@@ -4,6 +4,9 @@
 Build an Android application that allows a user to enter an organization name and then displays the top 3 most popular (by stars) repositories on GitHub for that organization.   A user should be able to click on one of the Repos and navigate to it within a webview or chrome custom tabs.
 You can find details on the API here: https://developer.github.com/v3/
 
+** To compile this app please use Android studio version >= 2021.1.1
+
+This code is based on my compose-template available here: https://github.com/lupsyn/compose-template
 
 ## Features 🎨
 
