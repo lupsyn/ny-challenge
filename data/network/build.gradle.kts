@@ -33,8 +33,9 @@ dependencies {
     androidTestImplementation(Deps.test.runner)
     androidTestImplementation(Deps.test.room)
 
+    testImplementation(Deps.coroutines.test)
     testImplementation(Deps.test.junit)
     testImplementation(Deps.test.mockk)
-
-    testImplementation(Deps.coroutines.test)
+    testImplementation(Deps.test.mockito)
+    testImplementation(Deps.test.mockitoInline)
 }
