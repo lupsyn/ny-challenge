@@ -37,7 +37,7 @@ class SearchViewModelTest {
         shortDescriptionHTML = "shortDescriptionHTML"
     )
 
-    val viewRpository = ViewRepository(
+    private val viewRpository = ViewRepository(
         id = "Id",
         name = "name",
         openGraphImageUrl = "openGraphImageUrl",
