@@ -10,9 +10,14 @@ import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.launch
 
-class SearchViewModel(
+/**
+ * [SearchViewModel] contains main logic of the app.
+ *
+ * It's open due [SearchViewMOdelFake]
+ */
+open class SearchViewModel(
     val getListOfRepositoriesUseCase: GetListOfRepositoriesUseCase,
-    val repositoryMapper: RepositoryMapper
+    private val repositoryMapper: RepositoryMapper
 ) : ViewModel() {
 
     private val searchMutableText: MutableStateFlow<String> = MutableStateFlow("")
