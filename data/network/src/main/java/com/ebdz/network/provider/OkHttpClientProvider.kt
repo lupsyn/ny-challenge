@@ -3,6 +3,7 @@ package com.ebdz.network.provider
 import okhttp3.Cache
 import okhttp3.OkHttpClient
 
+//FIXME : Token should be store in local.properties, for the sake of this challenge i'll leave it here.
 class OkHttpClientProvider {
     fun provideOkHttpClient(
         interceptorProvider: OkHttpInterceptorsProvider,
