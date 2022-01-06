@@ -17,7 +17,7 @@ import org.koin.dsl.module
  */
 val networkModule = module {
     single<GitHubNetworkDataSource> { GitHubNetworkDataSourceImpl(get(), get()) }
-    single { OkHttpClientProvider().getOkHttpClient(get(), get()) }
+    single { OkHttpClientProvider().provideOkHttpClient(get(), get()) }
     single { OkHttpCacheProvider().provideCache(androidApplication()) }
     single { ApolloGraphQLProvider(get(), get()).getApolloClient() }
 

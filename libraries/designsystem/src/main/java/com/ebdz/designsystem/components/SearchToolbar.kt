@@ -81,6 +81,7 @@ fun ToolbarWithTitle(@StringRes titleID: Int) = TopAppBar(
 )
 
 
+@Suppress("LongParameterList")
 @ExperimentalAnimationApi
 @ExperimentalComposeUiApi
 @Composable
@@ -96,8 +97,6 @@ fun ToolbarWithSearchBar(
     val keyboardController = LocalSoftwareKeyboardController.current
     val focusRequester = remember { FocusRequester() }
 
-
-
     TopAppBar(title = { Text("") }, navigationIcon = {
         IconButton(onClick = { onNavigateBack() }) {
             Icon(
@@ -107,7 +106,6 @@ fun ToolbarWithSearchBar(
             )
         }
     }, actions = {
-
         OutlinedTextField(
             modifier = Modifier
                 .fillMaxWidth()
@@ -118,9 +116,7 @@ fun ToolbarWithSearchBar(
                 .focusRequester(focusRequester),
             value = searchText,
             onValueChange = onSearchTextChanged,
-            placeholder = {
-                Text(text = placeholderText)
-            },
+            placeholder = { Text(text = placeholderText) },
             colors = TextFieldDefaults.textFieldColors(
                 focusedIndicatorColor = Color.Transparent,
                 unfocusedIndicatorColor = Color.Transparent,
@@ -134,10 +130,8 @@ fun ToolbarWithSearchBar(
                     exit = fadeOut()
                 ) {
                     IconButton(onClick = { onClearClick() }) {
-                        Icon(
-                            imageVector = Icons.Outlined.Close,
-                            contentDescription = stringResource(id = R.string.icn_search_clear_content_description)
-                        )
+                        Icon(imageVector = Icons.Outlined.Close,
+                            contentDescription = stringResource(id = R.string.icn_search_clear_content_description))
                     }
 
                 }
@@ -158,11 +152,7 @@ fun ToolbarWithSearchBar(
 
 
     })
-
-
-    LaunchedEffect(Unit) {
-        focusRequester.requestFocus()
-    }
+    LaunchedEffect(Unit) { focusRequester.requestFocus() }
 }
 
 @Composable

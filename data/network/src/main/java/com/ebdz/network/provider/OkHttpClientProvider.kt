@@ -4,7 +4,7 @@ import okhttp3.Cache
 import okhttp3.OkHttpClient
 
 class OkHttpClientProvider {
-    fun getOkHttpClient(
+    fun provideOkHttpClient(
         interceptorProvider: OkHttpInterceptorsProvider,
         cache: Cache
     ): OkHttpClient =
