@@ -6,6 +6,8 @@ You can find details on the API here: https://developer.github.com/v3/
 
 ** To compile this app please use Android studio version >= 2021.1.1
 
+This code is based on my compose-template available here: https://github.com/lupsyn/compose-template
+
 ## Features 🎨
 
 - **100% Kotlin-only**.
