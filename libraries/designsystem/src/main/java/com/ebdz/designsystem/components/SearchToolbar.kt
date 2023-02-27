@@ -80,7 +80,6 @@ fun ToolbarWithTitle(@StringRes titleID: Int) = TopAppBar(
     backgroundColor = MaterialTheme.colors.background,
 )
 
-
 @Suppress("LongParameterList")
 @ExperimentalAnimationApi
 @ExperimentalComposeUiApi
@@ -130,10 +129,11 @@ fun ToolbarWithSearchBar(
                     exit = fadeOut()
                 ) {
                     IconButton(onClick = { onClearClick() }) {
-                        Icon(imageVector = Icons.Outlined.Close,
-                            contentDescription = stringResource(id = R.string.icn_search_clear_content_description))
+                        Icon(
+                            imageVector = Icons.Outlined.Close,
+                            contentDescription = stringResource(id = R.string.icn_search_clear_content_description)
+                        )
                     }
-
                 }
             },
             maxLines = 1,
@@ -147,10 +147,9 @@ fun ToolbarWithSearchBar(
                 onDone = {
                     keyboardController?.hide()
                     onSearch.invoke()
-                }),
+                }
+            ),
         )
-
-
     })
     LaunchedEffect(Unit) { focusRequester.requestFocus() }
 }
@@ -179,5 +178,6 @@ fun SearchToolbarWithTitleAndSearchIcon(
                     contentDescription = stringResource(searchIconContentDescriptor)
                 )
             }
-        })
+        }
+    )
 }
