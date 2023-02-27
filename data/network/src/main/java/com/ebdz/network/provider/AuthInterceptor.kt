@@ -1,8 +1,8 @@
 package com.ebdz.network.provider
 
-import java.io.IOException
 import okhttp3.Interceptor
 import okhttp3.Response
+import java.io.IOException
 
 /**
  * A [Interceptor] that adds an auth token to requests.

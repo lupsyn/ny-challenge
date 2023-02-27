@@ -1,8 +1,8 @@
 package com.ebdz.network.provider
 
 import android.app.Application
-import java.io.File
 import okhttp3.Cache
+import java.io.File
 
 class OkHttpCacheProvider {
     fun provideCache(application: Application) = Cache(

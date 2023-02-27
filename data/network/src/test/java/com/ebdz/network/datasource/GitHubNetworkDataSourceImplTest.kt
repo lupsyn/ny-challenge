@@ -22,7 +22,6 @@ import org.mockito.junit.MockitoJUnitRunner
 @RunWith(MockitoJUnitRunner::class)
 class GitHubNetworkDataSourceImplTest {
 
-
     private lateinit var underTest: GitHubNetworkDataSourceImpl
 
     @Mock
@@ -33,7 +32,6 @@ class GitHubNetworkDataSourceImplTest {
 
     @Mock
     lateinit var repositoryNode: GetStarredRepositoriesFromOrganizationNameQuery.OnRepository
-
 
     @Mock
     lateinit var repository: Repository
@@ -53,7 +51,6 @@ class GitHubNetworkDataSourceImplTest {
             apolloClient = apolloClient,
             repositoryMapper = repositoryMapper
         )
-
     }
 
     @Ignore("Using fetchPolicy ext func make this test fail, investigate more here.")
@@ -97,6 +94,4 @@ class GitHubNetworkDataSourceImplTest {
             assertEquals(listOf(repository), ans)
         }
     }
-
 }
-

@@ -10,7 +10,6 @@ import com.ebdz.network.utils.HttpUrlApolloAdapter
 import com.ebdz.network.utils.SpannedStringApolloAdapter
 import okhttp3.OkHttpClient
 
-
 class ApolloGraphQLProvider(
     private val okHttpClient: OkHttpClient,
     private val normalizedCacheFactory: NormalizedCacheFactory

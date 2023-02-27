@@ -11,4 +11,3 @@ class OkHttpInterceptorsProvider {
 
     fun provideAuthInterceptor(accessToken: String) = AuthorizationInterceptor(accessToken)
 }
-

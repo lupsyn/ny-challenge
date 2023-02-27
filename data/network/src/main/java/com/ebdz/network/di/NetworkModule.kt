@@ -25,4 +25,3 @@ val networkModule = module {
     factory { OkHttpInterceptorsProvider() }
     factory { RepositoryMapper() }
 }
-
