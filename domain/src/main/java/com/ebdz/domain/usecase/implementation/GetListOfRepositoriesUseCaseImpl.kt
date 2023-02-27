@@ -10,6 +10,6 @@ class GetListOfRepositoriesUseCaseImpl(private val repository: GitHubRepository)
     GetListOfRepositoriesUseCase {
     override suspend fun invoke(organizationName: String): List<Repository> =
         withContext(Dispatchers.IO) {
-             repository.getListOfRepositoriesByOrganizationName(organizationName)
-         }
+            repository.getListOfRepositoriesByOrganizationName(organizationName)
+        }
 }
