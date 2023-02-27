@@ -35,7 +35,6 @@ class RepositoryMapperTest {
             shortDescriptionHTML = spanString
         )
 
-
         given(spanString.toString()).willReturn("test")
 
         val result = Repository(

@@ -28,11 +28,8 @@ object Destinations {
     const val About = "about_screen"
 }
 
-
-
 const val ROOT_GRAPH_ROUTE = "root"
 const val PREF_GRAPH_ROUTE = "preferences"
 const val HOME_GRAPH_ROUTE = "home"
-
 const val BOTTOM_TEST_TAG = "_bottom"
 const val SCREEN_TEST_TAG = "_screen"

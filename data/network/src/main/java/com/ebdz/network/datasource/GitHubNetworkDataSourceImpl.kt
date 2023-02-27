@@ -17,7 +17,7 @@ class GitHubNetworkDataSourceImpl(
     override suspend fun getListOfRepositoriesByOrganizationName(organizationName: String): List<Repository> {
         val getStarredFromOrganization =
             GetStarredRepositoriesFromOrganizationNameQuery("org:$organizationName sort:stars-desc")
-        //TODO : cache policy here should be set somewhere else.(external file ? or passed down by use-case ?)
+        // TODO : cache policy here should be set somewhere else.(external file ? or passed down by use-case ?)
 
         val response = apolloClient.query(getStarredFromOrganization)
             .fetchPolicy(FetchPolicy.CacheFirst)

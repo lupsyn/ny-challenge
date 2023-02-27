@@ -18,7 +18,6 @@ import com.ebdz.core.extension.getVersionName
 import com.ebdz.designsystem.components.ToolbarWithTitle
 import com.ebdz.preference.R
 
-
 @Composable
 fun PreferenceScreen(
     modifier: Modifier = Modifier,

@@ -2,9 +2,9 @@ package com.ebdz.mapper
 
 import com.ebdz.repository.mapper.GitHubMapper
 import com.ebdz.repository.model.Repository
-import junit.framework.TestCase.assertEquals
 import org.junit.Before
 import org.junit.Test
+import junit.framework.TestCase.assertEquals
 
 import com.ebdz.domain.model.Repository as DomainRepository
 

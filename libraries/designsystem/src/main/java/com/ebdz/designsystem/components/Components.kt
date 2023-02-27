@@ -68,7 +68,6 @@ fun TitleWithString(@StringRes header: Int) {
     )
 }
 
-
 @OptIn(ExperimentalComposeUiApi::class)
 @Composable
 fun InputTextField(
@@ -117,6 +116,6 @@ fun LoadingBar(modifier: Modifier = Modifier) {
         contentAlignment = Alignment.Center,
         modifier = modifier
             .semantics { contentDescription = loadingContentDescriptor }
-            .fillMaxSize())
-    { CircularProgressIndicator() }
+            .fillMaxSize()
+    ) { CircularProgressIndicator() }
 }

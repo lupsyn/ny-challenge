@@ -26,7 +26,6 @@ import com.ebdz.search.presentation.SearchState.Loaded
 import com.ebdz.search.presentation.SearchState.Loading
 import org.koin.androidx.compose.getViewModel
 
-
 @ExperimentalComposeUiApi
 @OptIn(ExperimentalAnimationApi::class)
 @Composable
@@ -62,7 +61,7 @@ fun SearchScreen(
 }
 
 @Composable
-private fun Content(
+fun Content(
     modifier: Modifier = Modifier,
     searchState: SearchState,
     onRetry: () -> Unit,
@@ -90,4 +89,3 @@ private fun Content(
         )
     }
 }
-

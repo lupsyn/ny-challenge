@@ -18,7 +18,7 @@ object PluginsVersions {
 }
 
 dependencies {
-    implementation("com.android.tools.build:gradle:${PluginsVersions.gradle}")
+    implementation("com.android.tools.build:gradle:7.2.2")
     implementation("org.jetbrains.kotlin:kotlin-gradle-plugin:${PluginsVersions.kotlin}")
     implementation("io.gitlab.arturbosch.detekt:detekt-gradle-plugin:${PluginsVersions.detekt}")
     implementation("com.apollographql.apollo3:apollo-gradle-plugin:${PluginsVersions.apollo}")

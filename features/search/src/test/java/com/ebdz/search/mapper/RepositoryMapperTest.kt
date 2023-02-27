@@ -6,7 +6,6 @@ import org.junit.Before
 import org.junit.Test
 import com.ebdz.search.model.Repository as ViewRepository
 
-
 class RepositoryMapperTest {
     private lateinit var underTest: RepositoryMapper
 

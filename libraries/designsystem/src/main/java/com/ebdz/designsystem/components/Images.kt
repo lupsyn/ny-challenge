@@ -14,7 +14,6 @@ import coil.compose.rememberImagePainter
 import coil.transform.CircleCropTransformation
 import com.ebdz.designsystem.R
 
-
 /**
  * [ImageIconWithContentDescriptor] icon with content descriptor
  */
@@ -46,7 +45,6 @@ fun NetworkImageRoundedIcon(url: String, modifier: Modifier) {
         modifier = modifier
     )
 }
-
 
 @Composable
 fun NoContentImage(modifier: Modifier) {

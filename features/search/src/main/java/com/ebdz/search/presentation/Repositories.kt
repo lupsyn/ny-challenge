@@ -15,7 +15,6 @@ import androidx.compose.ui.unit.dp
 import com.ebdz.designsystem.components.NetworkImageRoundedIcon
 import com.ebdz.search.model.Repository
 
-
 @Composable
 fun Repositories(
     repositories: List<Repository>,
@@ -33,7 +32,8 @@ private fun RepositoryRow(
     repository: Repository,
     onClick: (repository: Repository) -> Unit,
 ) {
-    Row(verticalAlignment = Alignment.CenterVertically,
+    Row(
+        verticalAlignment = Alignment.CenterVertically,
         modifier = Modifier.clickable { onClick(repository) }
     ) {
 
@@ -43,7 +43,6 @@ private fun RepositoryRow(
                 .size(104.dp)
                 .padding(16.dp)
         )
-
         Column(modifier = Modifier.padding(end = 16.dp)) {
             Text(repository.name)
             Text("Stars : ${repository.stargazerCount}")

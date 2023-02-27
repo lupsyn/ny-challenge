@@ -56,5 +56,4 @@ class GitHubRepositoryImplTest {
             verify(networkDataSource).getListOfRepositoriesByOrganizationName(stringSearch)
         }
     }
-
 }

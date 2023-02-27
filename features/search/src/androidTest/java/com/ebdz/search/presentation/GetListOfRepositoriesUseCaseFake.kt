@@ -21,7 +21,6 @@ class GetListOfRepositoriesUseCaseFake : GetListOfRepositoriesUseCase {
                     shortDescriptionHTML = "shortDescriptionHTML"
                 )
             )
-
     }
 
     fun shouldReturnError() {
