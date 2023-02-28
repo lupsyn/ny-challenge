@@ -1,10 +1,12 @@
 plugins {
-    id(GradlePlugin.KOTLIN_LIBRARY)
+    id("com.ebdz.com.gradleplugin.androidlibrary")
+    id("com.ebdz.com.gradleplugin.androidkotlin")
+    id("com.ebdz.com.gradleplugin.di")
 }
 
 dependencies {
     implementation(projects.domain)
-    implementation(Deps.koin.core)
+
     implementation(Deps.coroutines.core)
 
     testImplementation(Deps.test.junit)

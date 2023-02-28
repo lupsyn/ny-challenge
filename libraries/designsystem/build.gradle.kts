@@ -1,13 +1,6 @@
 plugins {
-    id(GradlePlugin.ANDROID_LIBRARY)
-    id(GradlePlugin.COMPOSE)
-}
-
-dependencies {
-    implementation(Deps.koin.android)
-
-    implementation("io.coil-kt:coil:1.4.0")
-    implementation(Deps.compose.coil)
-    
-    implementation(Deps.compose.viewModel)
+    id("com.ebdz.com.gradleplugin.androidlibrary")
+    id("com.ebdz.com.gradleplugin.androidkotlin")
+    id("com.ebdz.com.gradleplugin.di")
+    id("com.ebdz.com.gradleplugin.librarycompose")
 }

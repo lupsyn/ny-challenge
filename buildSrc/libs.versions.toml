@@ -1,0 +1,334 @@
+[versions]
+gradleplugin = "7.4.1"
+pluginDetekt = "1.22.0"
+pluginApollo = "3.0.0"
+
+kotlin = "1.7.20"
+kotlinCoroutines = "1.6.4"
+kotlinKaptMetadata = "0.5.0"
+lifecycle = "2.6.0-alpha03"
+materialTheme = "1.8.0"
+firebaseBOM = "30.5.0"
+appCompat = "1.5.0"
+constraintLayout = "2.1.4"
+cardview = "1.0.0"
+startupRuntime = "1.1.1"
+playCore = "1.10.0"
+splashScreen = "1.0.0"
+
+# We use the beta version here because of better performance with compose.
+# https://developer.android.com/jetpack/compose/interop/compose-in-existing-ui#compose-recyclerview
+# MAT-2564 - update to stable version
+recyclerview = "1.3.0-rc01"
+biometric = "1.1.0"
+fragmentKtx = "1.5.5"
+activityKtx = "1.6.1"
+detekt = "1.22.0"
+
+# Android Jetpack Compose
+composeCompiler = "1.4.3"
+compose = "1.3.3"
+composeMaterial = "1.3.1"
+composeLifecycle = "2.6.0-alpha03"
+composeAnimation = "1.3.3"
+composeActivity = "1.6.1"
+composeNavigation = "2.4.0-alpha09"
+composeViewModel = "2.4.0-beta01"
+composeIcons = "1.3.1"
+showkase = "1.0.0-beta17"
+detektComposeUiRules = "0.1.1"
+accompanistInset = "0.22.0-rc"
+
+#DI
+koin = "3.1.4"
+
+# Koil compose
+koilCompose = "2.2.2"
+
+# Google play services
+googlePlayServiceBase = "18.1.0"
+googlePlayServiceLocation = "20.0.0"
+googlePlayServiceGcm = "17.0.0"
+googlePlayServiceVision = "20.1.3"
+googlePlayServiceMap = "18.1.0"
+googlePlayServiceAdsIdentifier = "18.0.1"
+
+# Library
+androidAnnotation = "1.5.0"
+javaxAnnotation = "1.0"
+javaxInject = "1"
+
+# Analytics
+adobeCoreLibrary = "1.11.5"
+adobeAnalyticsLibrary = "1.2.10"
+adobeIdentityLibrary = "1.3.2"
+adobeLifecycleLibrary = "1.1.2"
+adobeSignalLibrary = "1.0.4"
+
+emarsys = "3.2.6"
+
+# Rx
+rxJava = "2.2.21"
+rxJavaAndroid = "2.1.1"
+rxKotlin = "2.4.0"
+
+# Rx Dog tag - uses RXJava 2.2.2, we use 2.1.7
+rxDogTag = "1.0.1"
+
+# Gson
+gson = "2.10.1"
+
+# Injection
+daggerCompiler = "2.45"
+dagger = "2.45"
+
+# Network layer
+okHttp = "4.10.0"
+retrofit = "2.9.0"
+retrofitGson = "2.9.0"
+retrofitRxJava = "1.0.0"
+apollo = "3.7.3"
+
+# Image utils
+glide = "4.14.2"
+lottie = "5.2.0"
+
+# Logging
+muLogging = "3.0.5"
+
+# Utils
+storyly = "1.30.0"
+branchSdk = "5.2.7"
+jsonwebtoken = "0.11.5"
+slyceSdk = "5.13.4"
+pageIndicatorView = "1.0.3"
+
+# App health libraries
+leakCanary = "2.10"
+
+# Test Libraries
+junit = "4.13.2"
+junitKtx = "1.1.5"
+junitParamTest = "1.1.1"
+androidCoreTest = "2.1.0"
+assertjCore = "3.24.2"
+mockitoCore = "4.11.0"
+mockitoKotlin = "1.6.0"
+mockWebServer = "4.10.0"
+kotlinTurbine = "0.12.1"
+truth = "1.1.3"
+
+# Instrumented tests
+espresso = "3.5.1"
+espressoRecyclerViewUtils = "1.0"
+# using the beta due : https://github.com/android/android-test/issues/1412
+testCore = "1.5.0"
+testRunnerVersion = "1.5.2"
+testRules = "1.5.0"
+testJunitExt = "1.1.5"
+testJunitKtExtVersions = "1.1.5"
+testUiAutomator = "2.2.0"
+testOrchestrator = "1.4.2"
+jsonPatch = "0.3.22"
+
+# Benchmark
+benchmarkMacro = "1.2.0-alpha05"
+
+# Security
+securityCrypto = "1.0.0"
+
+[libraries]
+# Define compose libraries
+composeMaterial = { module = "androidx.compose.material:material", version.ref = "composeMaterial" }
+composeAnimation = { module = "androidx.compose.animation:animation", version.ref = "composeAnimation" }
+composeTooling = { module = "androidx.compose.ui:ui-tooling", version.ref = "compose" }
+composeLiveData = { module = "androidx.compose.runtime:runtime-livedata", version.ref = "compose" }
+composeActivity = { module = "androidx.activity:activity-compose", version.ref = "composeActivity" }
+composeViewModel = { module = "androidx.lifecycle:lifecycle-viewmodel-compose", version.ref = "composeViewModel" }
+composeLifecycleRuntime = { module = "androidx.lifecycle:lifecycle-runtime-compose", version.ref = "composeLifecycle" }
+composeCoil = { module = "io.coil-kt:coil-compose", version.ref = "koilCompose" }
+composeShowkase = { module = "com.airbnb.android:showkase", version.ref = "showkase" }
+composeShowkaseProcessor = { module = "com.airbnb.android:showkase-processor", version.ref = "showkase" }
+composeTestManifest = { module = "androidx.compose.ui:ui-test-manifest", version.ref = "compose" }
+composeIcons = { module = "androidx.compose.material:material-icons-extended", version.ref = "composeIcons" }
+composeNavigation = { module = "androidx.navigation:navigation-compose", version.ref = "composeNavigation" }
+composeAccompanistInset = { module = "com.google.accompanist:accompanist-insets", version.ref = "accompanistInset" }
+
+# Define detekt libraries
+detektComposeRules = { module = "io.nlopez.compose.rules:detekt", version.ref = "detektComposeUiRules" }
+
+detektFormattion = { module = "io.gitlab.arturbosch.detekt:detekt-formatting", version.ref = "detekt" }
+
+# Define android framemework libraries
+appCompat = { module = "androidx.appcompat:appcompat", version.ref = "appCompat" }
+constraintLayout = { module = "androidx.constraintlayout:constraintlayout", version.ref = "constraintLayout" }
+cardView = { module = "androidx.cardview:cardview", version.ref = "cardview" }
+recyclerView = { module = "androidx.recyclerview:recyclerview", version.ref = "recyclerview" }
+biometric = { module = "androidx.biometric:biometric", version.ref = "biometric" }
+fragmentKtx = { module = "androidx.fragment:fragment-ktx", version.ref = "fragmentKtx" }
+activityKtx = { module = "androidx.activity:activity-ktx", version.ref = "activityKtx" }
+lifecycleViewmodel = { module = "androidx.lifecycle:lifecycle-viewmodel-ktx", version.ref = "lifecycle" }
+lifecycleLivedata = { module = "androidx.lifecycle:lifecycle-livedata-ktx", version.ref = "lifecycle" }
+lifecycleComopose = { module = "androidx.lifecycle:lifecycle-runtime-compose", version.ref = "lifecycle" }
+materialTheme = { module = "com.google.android.material:material", version.ref = "materialTheme" }
+playcore = { module = "com.google.android.play:core", version = "playCore" }
+#splashScreen = { module = "androidx.core:core-splashscreen", version = "splashScreen" }
+
+# Define kotlin libraries
+kotlinCoroutines = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-android", version.ref = "kotlinCoroutines" }
+kotlin = { module = "org.jetbrains.kotlin:kotlin-stdlib-jdk8", version.ref = "kotlin" }
+
+# Define rx libraries
+rxJava = { module = "io.reactivex.rxjava2:rxjava", version.ref = "rxJava" }
+rxJavaAndroid = { module = "io.reactivex.rxjava2:rxandroid", version.ref = "rxJavaAndroid" }
+rxKotlin = { module = "io.reactivex.rxjava2:rxkotlin", version.ref = "rxKotlin" }
+rxDogTag = { module = "com.uber.rxdogtag:rxdogtag", version.ref = "rxDogTag" }
+
+koin = { module = "io.insert-koin:koin-android", version.ref = "koin" }
+koinCompose = { module = "io.insert-koin:koin-androidx-compose", version.ref = "koin" }
+
+# Define android test libraries
+testUiAutomator = { module = "androidx.test.uiautomator:uiautomator", version.ref = "testUiAutomator" }
+testCore = { module = "androidx.test:core", version.ref = "testCore" }
+testRunner = { module = "androidx.test:runner", version.ref = "testRunnerVersion" }
+testRules = { module = "androidx.test:rules", version.ref = "testRules" }
+testJunitExt = { module = "androidx.test.ext:junit", version.ref = "testJunitExt" }
+testJunitKtExtVersions = { module = "androidx.test.ext:junit-ktx", version.ref = "testJunitKtExtVersions" }
+espressoCore = { module = "androidx.test.espresso:espresso-core", version.ref = "espresso" }
+espressoContrib = { module = "androidx.test.espresso:espresso-contrib", version.ref = "espresso" }
+espressoIntents = { module = "androidx.test.espresso:espresso-intents", version.ref = "espresso" }
+espressoIdlingResource = { module = "androidx.test.espresso:espresso-idling-resource", version.ref = "espresso" }
+composeTestJunit = { module = "androidx.compose.ui:ui-test-junit4", version.ref = "compose" }
+espressoRecyclerViewUtils = { module = "it.xabaras.android.espresso:recyclerview-child-actions", version.ref = "espressoRecyclerViewUtils" }
+jsonPatch = { module = "com.github.beyondeye:kjsonpatch", version.ref = "jsonPatch" }
+startup = { module = "androidx.startup:startup-runtime", version.ref = "startupRuntime" }
+
+# Define benchmark libraries
+benchmarkMacro = { module = "androidx.benchmark:benchmark-macro-junit4", version.ref = "benchmarkMacro" }
+
+# Define adobe libraries
+adobeCoreLibrary = { module = "com.adobe.marketing.mobile:sdk-core", version.ref = "adobeCoreLibrary" }
+adobeAnalyticsLibrary = { module = "com.adobe.marketing.mobile:analytics", version.ref = "adobeAnalyticsLibrary" }
+adobeIdentityLibrary = { module = "com.adobe.marketing.mobile:identity", version.ref = "adobeIdentityLibrary" }
+adobeLifecycleLibrary = { module = "com.adobe.marketing.mobile:lifecycle", version.ref = "adobeLifecycleLibrary" }
+adobeSignalLibrary = { module = "com.adobe.marketing.mobile:signal", version.ref = "adobeSignalLibrary" }
+
+# Define annotation libraries
+javaxAnnotation = { module = "javax.annotation:jsr250-api", version.ref = "javaxAnnotation" }
+androidAnnotation = { module = "androidx.annotation:annotation", version.ref = "androidAnnotation" }
+
+# Define test libraries
+junit = { module = "junit:junit", version.ref = "junit" }
+junitKtx = { module = "androidx.test.ext:junit-ktx", version.ref = "junitKtx" }
+assertjCore = { module = "org.assertj:assertj-core", version.ref = "assertjCore" }
+mockitoCore = { module = "org.mockito:mockito-core", version.ref = "mockitoCore" }
+mockitoInline = { module = "org.mockito:mockito-inline", version.ref = "mockitoCore" }
+mockitoKotlin = { module = "com.nhaarman:mockito-kotlin", version.ref = "mockitoKotlin" }
+androidCoreTesting = { module = "androidx.arch.core:core-testing", version.ref = "androidCoreTest" }
+truth = { module = "com.google.truth:truth", version.ref = "truth" }
+kotlinCoroutinesTest = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-test", version.ref = "kotlinCoroutines" }
+kotlinTurbine = { module = "app.cash.turbine:turbine", version.ref = "kotlinTurbine" }
+junitParamTest = { module = "pl.pragmatists:JUnitParams", version.ref = "junitParamTest" }
+mockWebServer = { module = "com.squareup.okhttp3:mockwebserver", version.ref = "mockWebServer" }
+orchestrator = { module = "androidx.test:orchestrator", version.ref = "testOrchestrator" }
+
+# Define gms libraries
+googlePlayServiceBase = { module = "com.google.android.gms:play-services-base", version.ref = "googlePlayServiceBase" }
+googlePlayServiceLocation = { module = "com.google.android.gms:play-services-location", version.ref = "googlePlayServiceLocation" }
+googlePlayServiceGcm = { module = "com.google.android.gms:play-services-gcm", version.ref = "googlePlayServiceGcm" }
+googlePlayServiceVision = { module = "com.google.android.gms:play-services-vision", version.ref = "googlePlayServiceVision" }
+googlePlayServiceMap = { module = "com.google.android.gms:play-services-maps", version.ref = "googlePlayServiceMap" }
+googlePlayServiceAdsIdentifier = { module = "com.google.android.gms:play-services-ads-identifier", version.ref = "googlePlayServiceAdsIdentifier" }
+
+# Define firebase libraries
+firebaseMessaging = { module = "com.google.firebase:firebase-messaging-ktx" }
+firebaseConfig = { module = "com.google.firebase:firebase-config-ktx" }
+firebaseAnalytics = { module = "com.google.firebase:firebase-analytics-ktx" }
+firebaseCrashlytics = { module = "com.google.firebase:firebase-crashlytics-ktx" }
+firebaseFirestore = { module = "com.google.firebase:firebase-firestore-ktx" }
+firebaseStorage = { module = "com.google.firebase:firebase-storage-ktx" }
+firebaseAppIndexing = { module = "com.google.firebase:firebase-appindexing" }
+firebasePerf = { module = "com.google.firebase:firebase-perf-ktx" }
+firebaseAuth = { module = "com.google.firebase:firebase-auth-ktx" }
+firebaseBom = { module = "com.google.firebase:firebase-bom", version.ref = "firebaseBOM" }
+firebaseInAppMessageDisplay = { module = "com.google.firebase:firebase-inappmessaging-display-ktx" }
+
+# Define network libraries
+retrofit = { module = "com.squareup.retrofit2:retrofit", version.ref = "retrofit" }
+retrofitGson = { module = "com.squareup.retrofit2:converter-gson", version.ref = "retrofitGson" }
+retrofitRxJava = { module = "com.jakewharton.retrofit:retrofit2-rxjava2-adapter", version.ref = "retrofitRxJava" }
+
+# Define okhttp libraries
+okHttp = { module = "com.squareup.okhttp3:okhttp", version.ref = "okHttp" }
+okHttpLoggingInterceptor = { module = "com.squareup.okhttp3:logging-interceptor", version.ref = "okHttp" }
+gson = { module = "com.google.code.gson:gson", version.ref = "gson" }
+
+# Define other libraries
+javaxInject = { module = "javax.inject:javax.inject", version.ref = "javaxInject" }
+storyly = { module = "com.appsamurai.storyly:storyly", version.ref = "storyly" }
+branch = { module = "io.branch.sdk.android:library", version.ref = "branchSdk" }
+emarsys = { module = "com.emarsys:emarsys-sdk", version.ref = "emarsys" }
+emarsysFirebase = { module = "com.emarsys:emarsys-firebase", version.ref = "emarsys" }
+pageIndicatorView = { module = "com.romandanylyk:pageindicatorview", version.ref = "pageIndicatorView" }
+leakCanary = { module = "com.squareup.leakcanary:leakcanary-android", version.ref = "leakCanary" }
+kotlinKaptMetadata = { module = "org.jetbrains.kotlinx:kotlinx-metadata-jvm", version.ref = "kotlinKaptMetadata" }
+jjwtImpl = { module = "io.jsonwebtoken:jjwt-impl", version.ref = "jsonwebtoken" }
+jjwtOrgJson = { module = "io.jsonwebtoken:jjwt-orgjson", version.ref = "jsonwebtoken" }
+jjwtApi = { module = "io.jsonwebtoken:jjwt-api", version.ref = "jsonwebtoken" }
+security = { module = "androidx.security:security-crypto", version.ref = "securityCrypto" }
+mulogging = { module = "io.github.microutils:kotlin-logging-jvm", version.ref = "muLogging" }
+
+apolloHttpCache = { module = "com.apollographql.apollo3:apollo-http-cache", version.ref = "apollo" }
+apolloNormalizedCache = { module = "com.apollographql.apollo3:apollo-normalized-cache", version.ref = "apollo" }
+apolloRuntime= { module = "com.apollographql.apollo3:apollo-runtime", version.ref = "apollo" }
+
+
+#Define glide libraries
+glide = { module = "com.github.bumptech.glide:glide", version.ref = "glide" }
+glideCompile = { module = "com.github.bumptech.glide:compiler", version.ref = "glide" }
+
+#Define lottie libraries
+lottie = { module = "com.airbnb.android:lottie-compose", version.ref = "lottie" }
+
+#plugins
+kotlinGradlePlugin = { module = "org.jetbrains.kotlin:kotlin-gradle-plugin", version.ref = "kotlin" }
+gradlePlugin = { module = "com.android.tools.build:gradle", version.ref = "gradleplugin" }
+detektPlugin = { module = "io.gitlab.arturbosch.detekt:detekt-gradle-plugin", version.ref = "pluginDetekt" }
+apolloPlugin = { module = "com.apollographql.apollo3:apollo-gradle-plugin", version.ref = "pluginApollo" }
+# Define bundles/groups of libraries
+[bundles]
+compose = [
+    "composeMaterial",
+    "composeAnimation",
+    "composeTooling",
+    "composeLiveData",
+    "composeActivity",
+    "composeAccompanistInset",
+    "composeNavigation",
+    "composeViewModel",
+    "composeIcons",
+    "composeLifecycleRuntime",
+    "composeCoil"]
+
+
+detekt = ["detektComposeRules", "detektFormattion"]
+androidFramework = ["appCompat", "constraintLayout", "cardView", "recyclerView", "biometric", "fragmentKtx", "activityKtx", "lifecycleViewmodel", "lifecycleLivedata", "lifecycleComopose", "materialTheme", "playcore"]
+kotlin = ["kotlin", "kotlinCoroutines"]
+rx = ["rxJava", "rxJavaAndroid", "rxKotlin"]
+androidTest = ["testUiAutomator", "testCore", "testRules", "testJunitExt", "testJunitKtExtVersions", "espressoIntents", "espressoIdlingResource", "androidAnnotation", "composeTestJunit", "mockWebServer", "espressoRecyclerViewUtils", "jsonPatch"]
+adobe = ["adobeCoreLibrary", "adobeAnalyticsLibrary", "adobeIdentityLibrary", "adobeLifecycleLibrary", "adobeSignalLibrary"]
+annotation = ["javaxAnnotation", "androidAnnotation"]
+mockito = ["mockitoCore", "mockitoKotlin", "mockitoInline"]
+junit = ["junit", "junitKtx"]
+gms = ["googlePlayServiceBase", "googlePlayServiceLocation", "googlePlayServiceGcm", "googlePlayServiceVision", "googlePlayServiceMap", "googlePlayServiceAdsIdentifier"]
+firebaseCommon = ["firebaseMessaging", "firebaseConfig", "firebaseAnalytics", "firebaseCrashlytics", "firebaseFirestore", "firebaseStorage", "firebaseAppIndexing", "firebasePerf"]
+retrofit = ["retrofitGson", "retrofitRxJava"]
+okHttp = ["okHttp", "okHttpLoggingInterceptor"]
+apolloBundle = ["apolloHttpCache","apolloNormalizedCache","apolloRuntime"]
+
+[plugins]
+androidApplication = { id = "com.android.application", version.ref = "gradleplugin" }
+androidLibrary = { id = "com.android.library", version.ref = "gradleplugin" }
+kotlinAndroid = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
+kotlinKapt = { id = "org.jetbrains.kotlin.kapt", version.ref = "kotlin" }
+apollo = { id = "com.apollographql.apollo3:apollo-gradle-plugin", version.ref = "pluginApollo" }

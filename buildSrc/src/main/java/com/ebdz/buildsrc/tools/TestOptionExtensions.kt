@@ -1,4 +1,4 @@
-package extensions
+package com.ebdz.buildsrc.tools
 
 import com.android.build.api.dsl.CommonExtension
 import com.android.build.gradle.internal.dsl.ManagedVirtualDevice
@@ -18,8 +18,6 @@ fun CommonExtension<*, *, *, *>.addSingleDeviceTestOptions() {
             device = "Pixel 2"
             apiLevel = 29
             systemImageSource = "google"
-            abi = "x86"
-
         }.also { devices.add(it) }
     }
 }

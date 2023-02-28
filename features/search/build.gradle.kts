@@ -1,7 +1,8 @@
 plugins {
-    id(GradlePlugin.ANDROID_LIBRARY)
-    id(GradlePlugin.COMPOSE)
-    id(GradlePlugin.PARCELIZE)
+    id("com.ebdz.com.gradleplugin.androidlibrary")
+    id("com.ebdz.com.gradleplugin.androidkotlin")
+    id("com.ebdz.com.gradleplugin.librarycompose")
+    id("com.ebdz.com.gradleplugin.di")
 }
 
 dependencies {
@@ -10,7 +11,6 @@ dependencies {
     implementation(projects.domain)
 
     implementation(Deps.android.playCore)
-    implementation(Deps.koin.android)
     implementation(Deps.koin.compose)
 
     testImplementation(projects.libraries.test)

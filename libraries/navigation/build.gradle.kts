@@ -1,7 +1,9 @@
 plugins {
-    id(GradlePlugin.ANDROID_LIBRARY)
+    id("com.ebdz.com.gradleplugin.androidlibrary")
+    id("com.ebdz.com.gradleplugin.androidkotlin")
 }
 
 dependencies {
-    implementation(Deps.android.ktx)
+    api(Deps.android.ktx)
+    api(libs.composeNavigation)
 }
