@@ -5,6 +5,8 @@ You can find details on the API here: https://developer.github.com/v3/
 
 This code is based on my compose-template available here: https://github.com/lupsyn/compose-template
 
+Generally this is a playgroud for a graph-ql integration.
+
 ## Features 🎨
 
 - **100% Kotlin-only**.
