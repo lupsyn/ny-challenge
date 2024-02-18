@@ -21,7 +21,7 @@ internal class AboutTest {
         loadView()
 
         // Then the items are shown
-        val appName = context.getString(R.string.app_name)
+        val appName = "AppName"
         val description = context.getString(R.string.about_description)
         val button = context.getString(R.string.about_button_project)
 

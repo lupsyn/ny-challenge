@@ -23,11 +23,11 @@ class AndroidLibraryKotlinConventionPlugin : Plugin<Project> {
     }
 
     private fun Project.configureKotlinAndroid(
-        extension: CommonExtension<*, *, *, *>,
+        extension: CommonExtension<*, *, *, *, *>
     ) {
         extension.apply {
             kotlinOptions {
-                jvmTarget = JavaVersion.VERSION_11.toString()
+                jvmTarget = JavaVersion.VERSION_17.toString()
             }
         }
 

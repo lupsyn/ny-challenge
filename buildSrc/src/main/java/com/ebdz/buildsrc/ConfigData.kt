@@ -2,9 +2,9 @@ package com.ebdz.buildsrc
 
 object ConfigData {
     // Android
-    const val androidMinSdkVersion = 28
-    const val androidTargetSdkVersion = 33
-    const val androidCompileSdkVersion = 33
+    const val androidMinSdkVersion = 30
+    const val androidTargetSdkVersion = 34
+    const val androidCompileSdkVersion = 34
 
     const val androidApplicationId = "com.ebdz.compose.nychallenge"
     const val testApplicationId = "com.ebdz.compose.nychallenge.test"

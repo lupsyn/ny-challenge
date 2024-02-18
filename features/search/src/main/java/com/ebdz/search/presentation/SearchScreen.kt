@@ -66,7 +66,10 @@ fun Content(
     searchState: SearchState,
     onRetry: () -> Unit,
     onRepositoryClick: (Repository) -> Unit,
-) = Crossfade(targetState = searchState) { state ->
+) = Crossfade(
+    targetState = searchState,
+    label = ""
+) { state ->
     when (state) {
         is Error -> ErrorFullScreen(
             errorString = R.string.error,
@@ -82,6 +85,7 @@ fun Content(
             title = { TitleWithString(R.string.search_content_description) },
             modifier = Modifier
         )
+
         SearchState.NoContent -> DefaultFullscreenContent(
             { NoContentImage(modifier = Modifier.size(256.dp)) },
             title = { TitleWithString(R.string.no_content_description) },

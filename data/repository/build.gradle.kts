@@ -3,13 +3,17 @@ plugins {
     id("com.ebdz.com.gradleplugin.androidkotlin")
     id("com.ebdz.com.gradleplugin.di")
 }
+android {
+    namespace = "com.ebdz.repository"
+}
 
 dependencies {
     implementation(projects.domain)
 
-    implementation(Deps.coroutines.core)
+    implementation(libs.kotlinCoroutines)
 
-    testImplementation(Deps.test.junit)
-    testImplementation(Deps.test.mockito)
-    testImplementation(Deps.test.mockitoInline)
+    testImplementation(libs.junit)
+    testImplementation(libs.mockitoCore)
+    testImplementation(libs.mockitoKotlin)
+//    testImplementation(Deps.test.mockitoInline)
 }

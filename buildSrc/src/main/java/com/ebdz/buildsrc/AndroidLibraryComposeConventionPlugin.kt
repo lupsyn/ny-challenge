@@ -1,7 +1,7 @@
 package com.ebdz.buildsrc
 
 import com.android.build.gradle.LibraryExtension
-import com.newlook.buildsrc.tools.configureCompose
+import com.ebdz.buildsrc.tools.configureCompose
 import org.gradle.api.Plugin
 import org.gradle.api.Project
 import org.gradle.kotlin.dsl.getByType

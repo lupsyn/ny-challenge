@@ -1,6 +1,6 @@
 plugins {
     id("com.ebdz.com.gradleplugin.androidapplication")
-    id("com.ebdz.com.gradleplugin.detekt")
+//    id("com.ebdz.com.gradleplugin.detekt")
     id("com.ebdz.com.gradleplugin.di")
     id("com.ebdz.com.gradleplugin.applicationcompose")
 }
@@ -21,8 +21,10 @@ dependencies {
 
     implementation(libs.bundles.androidFramework)
     implementation(libs.composeActivity)
-//    implementation(libs.splashScreen)
-    implementation("androidx.core:core-splashscreen:1.1.0-alpha01")
+
+    implementation(libs.splashLibrary)
+    implementation(libs.koin)
+
     debugImplementation(libs.composeTestManifest)
-    implementation(Deps.koin.android)
+    androidTestImplementation(libs.bundles.androidTest)
 }

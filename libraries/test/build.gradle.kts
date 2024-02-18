@@ -3,8 +3,13 @@ plugins {
     id("com.ebdz.com.gradleplugin.androidkotlin")
 }
 
+android {
+    namespace = "com.ebdz.test"
+}
+
+
 dependencies {
-    api(libs.androidAnnotation)
+//    api(libs.androidAnnotation)
     api(libs.bundles.junit)
     api(libs.bundles.mockito)
     api(libs.assertjCore)

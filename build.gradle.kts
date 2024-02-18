@@ -16,7 +16,7 @@ allprojects {
 
 tasks.withType<KotlinCompile>().configureEach {
     kotlinOptions {
-        jvmTarget = JavaVersion.VERSION_11.toString()
+        jvmTarget = JavaVersion.VERSION_17.toString()
     }
 }
 
@@ -27,7 +27,7 @@ tasks.register("clean") {
 tasks.withType(KotlinCompile::class.java).configureEach {
     kotlinOptions {
         allWarningsAsErrors = false
-        freeCompilerArgs = listOf("-Xopt-in=kotlin.RequiresOptIn", "-Xopt-in=kotlin.Experimental")
+//        freeCompilerArgs = listOf("-Xopt-in=kotlin.RequiresOptIn", "-Xopt-in=kotlin.Experimental")
         jvmTarget = "1.8"
     }
 }

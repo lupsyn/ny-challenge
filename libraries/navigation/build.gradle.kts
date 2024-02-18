@@ -3,7 +3,11 @@ plugins {
     id("com.ebdz.com.gradleplugin.androidkotlin")
 }
 
+android {
+    namespace = "com.ebdz.navigation"
+}
+
 dependencies {
-    api(Deps.android.ktx)
+//    api(libs.androidKtxCore)
     api(libs.composeNavigation)
 }

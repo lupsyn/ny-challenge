@@ -1,4 +1,4 @@
-package com.newlook.buildsrc.tools
+package com.ebdz.buildsrc.tools
 
 import com.android.build.api.dsl.CommonExtension
 import org.gradle.api.Project
@@ -7,7 +7,7 @@ import org.gradle.kotlin.dsl.dependencies
 import org.gradle.kotlin.dsl.getByType
 
 internal fun Project.configureCompose(
-    extension: CommonExtension<*, *, *, *>,
+    extension: CommonExtension<*, *, *, *, *>
 ) {
     val libs = extensions.getByType<VersionCatalogsExtension>().named("libs")
 
@@ -21,7 +21,8 @@ internal fun Project.configureCompose(
         }
 
         dependencies {
-            add("implementation",  libs.findBundle("compose").get())
+            add("implementation", libs.findBundle("compose").get())
         }
     }
 }
+

@@ -1,7 +1,7 @@
 package com.ebdz.buildsrc
 
 import com.android.build.gradle.LibraryExtension
-import com.newlook.buildsrc.tools.Utils.excludeFromPackagingOptions
+import com.ebdz.buildsrc.tools.Utils.excludeFromPackagingOptions
 import org.gradle.api.JavaVersion
 import org.gradle.api.Plugin
 import org.gradle.api.Project
@@ -27,8 +27,8 @@ class AndroidLibraryConventionPlugin : Plugin<Project> {
         }
 
         compileOptions {
-            sourceCompatibility(JavaVersion.VERSION_11)
-            targetCompatibility(JavaVersion.VERSION_11)
+            sourceCompatibility(JavaVersion.VERSION_17)
+            targetCompatibility(JavaVersion.VERSION_17)
         }
 
         excludeFromPackagingOptions(

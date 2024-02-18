@@ -1,8 +1,6 @@
 package com.ebdz.buildsrc
 
 import com.android.build.api.dsl.ApplicationExtension
-import com.android.build.gradle.internal.dsl.BaseAppModuleExtension
-import com.ebdz.buildsrc.tools.addSingleDeviceTestOptions
 import com.ebdz.buildsrc.tools.kotlinOptions
 import org.gradle.api.JavaVersion
 import org.gradle.api.Plugin
@@ -32,6 +30,9 @@ class AndroidApplicationConventionPlugin : Plugin<Project> {
         commonExtension: ApplicationExtension,
     ) {
         commonExtension.apply {
+
+            namespace = "com.ebdz.compose"
+
             compileSdk = ConfigData.androidCompileSdkVersion
 
             testBuildType = "debug"
@@ -60,15 +61,15 @@ class AndroidApplicationConventionPlugin : Plugin<Project> {
             }
 
             compileOptions {
-                sourceCompatibility(JavaVersion.VERSION_11)
-                targetCompatibility(JavaVersion.VERSION_11)
+                sourceCompatibility(JavaVersion.VERSION_17)
+                targetCompatibility(JavaVersion.VERSION_17)
             }
 
             kotlinOptions {
-                jvmTarget = JavaVersion.VERSION_11.toString()
-                freeCompilerArgs = freeCompilerArgs.plus("-Xopt-in=kotlin.RequiresOptIn")
+                jvmTarget = JavaVersion.VERSION_17.toString()
+//                freeCompilerArgs = freeCompilerArgs.plus("-Xopt-in=kotlin.RequiresOptIn")
             }
-            addSingleDeviceTestOptions()
+//            addSingleDeviceTestOptions()
         }
     }
 }

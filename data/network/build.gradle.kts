@@ -17,16 +17,16 @@ apollo {
     )
 }
 
+android {
+    namespace = "com.ebdz.network"
+}
 
 dependencies {
     implementation(projects.libraries.core)
     implementation(projects.data.repository)
 
     implementation(libs.bundles.okHttp)
-
-    implementation(Deps.network.apolloRuntime)
-    implementation(Deps.network.apolloHttCcache)
-    implementation(Deps.network.apolloNormalizedCache)
+    implementation(libs.bundles.apolloBundle)
 
     androidTestImplementation(libs.bundles.androidTest)
 

@@ -2,7 +2,7 @@ package com.ebdz.buildsrc
 
 import com.android.build.gradle.TestExtension
 import com.ebdz.buildsrc.tools.kotlinOptions
-import com.newlook.buildsrc.tools.Utils.excludeFromPackagingOptions
+import com.ebdz.buildsrc.tools.Utils.excludeFromPackagingOptions
 import org.gradle.api.JavaVersion
 import org.gradle.api.Plugin
 import org.gradle.api.Project
@@ -33,8 +33,8 @@ class AndroidTestConventionPlugin : Plugin<Project> {
         }
 
         compileOptions {
-            sourceCompatibility(JavaVersion.VERSION_11)
-            targetCompatibility(JavaVersion.VERSION_11)
+            sourceCompatibility(JavaVersion.VERSION_17)
+            targetCompatibility(JavaVersion.VERSION_17)
         }
 
         excludeFromPackagingOptions(
@@ -46,7 +46,7 @@ class AndroidTestConventionPlugin : Plugin<Project> {
         )
 
         kotlinOptions {
-            jvmTarget = JavaVersion.VERSION_11.toString()
+            jvmTarget = JavaVersion.VERSION_17.toString()
         }
     }
 

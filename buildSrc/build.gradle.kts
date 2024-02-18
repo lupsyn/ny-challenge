@@ -32,10 +32,10 @@ gradlePlugin {
             id = "com.ebdz.com.gradleplugin.androidframework"
             implementationClass = "com.ebdz.buildsrc.AndroidFrameworkLibrariesConventionPlugin"
         }
-        register("androidLibraryDetekt") {
-            id = "com.ebdz.com.gradleplugin.detekt"
-            implementationClass = "com.ebdz.buildsrc.AndroidLibraryDetektConventionPlugin"
-        }
+//        register("androidLibraryDetekt") {
+//            id = "com.ebdz.com.gradleplugin.detekt"
+//            implementationClass = "com.ebdz.buildsrc.AndroidLibraryDetektConventionPlugin"
+//        }
         register("androidKotlin") {
             id = "com.ebdz.com.gradleplugin.androidkotlin"
             implementationClass = "com.ebdz.buildsrc.AndroidLibraryKotlinConventionPlugin"
@@ -63,7 +63,7 @@ dependencies {
 tasks.withType(org.jetbrains.kotlin.gradle.tasks.KotlinCompile::class.java).configureEach {
     kotlinOptions {
         allWarningsAsErrors = false
-        freeCompilerArgs = listOf("-Xopt-in=kotlin.RequiresOptIn", "-Xopt-in=kotlin.Experimental")
-        jvmTarget = JavaVersion.VERSION_11.toString()
+//        freeCompilerArgs = listOf("-Xopt-in=kotlin.RequiresOptIn", "-Xopt-in=kotlin.Experimental")
+        jvmTarget = JavaVersion.VERSION_17.toString()
     }
 }

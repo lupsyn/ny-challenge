@@ -2,7 +2,6 @@ package com.ebdz.compose
 
 import android.app.Application
 import com.ebdz.compose.di.appModule
-import com.ebdz.core.di.coreModule
 import com.ebdz.domain.di.domainModule
 import com.ebdz.network.di.networkModule
 import com.ebdz.repository.di.repositoryModule
@@ -26,7 +25,7 @@ class App : Application() {
 
             modules(
                 appModule +
-                        coreModule +
+//                        coreModule +
                         domainModule +
                         repositoryModule +
                         networkModule +

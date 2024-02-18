@@ -13,7 +13,7 @@ import kotlinx.coroutines.launch
 /**
  * [SearchViewModel] contains main logic of the app.
  *
- * It's open due [SearchViewMOdelFake]
+ * It's open due [SearchViewModelFake]
  */
 open class SearchViewModel(
     val getListOfRepositoriesUseCase: GetListOfRepositoriesUseCase,

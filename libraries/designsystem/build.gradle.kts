@@ -4,3 +4,7 @@ plugins {
     id("com.ebdz.com.gradleplugin.di")
     id("com.ebdz.com.gradleplugin.librarycompose")
 }
+
+android {
+    namespace = "com.ebdz.designsystem"
+}

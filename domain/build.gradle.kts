@@ -4,11 +4,15 @@ plugins {
     id("com.ebdz.com.gradleplugin.di")
 }
 
-dependencies {
-    implementation(Deps.logging)
-    implementation(Deps.coroutines.core)
+android {
+    namespace = "com.ebdz.domain"
+}
 
-    testImplementation(Deps.test.junit)
-    testImplementation(Deps.test.mockk)
-    testImplementation(Deps.coroutines.test)
+dependencies {
+    implementation(libs.mulogging)
+    implementation(libs.kotlinCoroutines)
+
+    testImplementation(libs.junit)
+//    testImplementation(libs.mockk)
+    testImplementation(libs.kotlinCoroutinesTest)
 }

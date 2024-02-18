@@ -1,11 +1,9 @@
 package quality
 
-import Deps
-
 val ktlint: Configuration by configurations.creating
 
 dependencies {
-    ktlint(Deps.quality.ktlint)
+    ktlint("org.jlleitschuh.gradle.ktlint:1.1.1")
 }
 
 tasks {
