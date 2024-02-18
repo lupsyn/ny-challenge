@@ -55,7 +55,7 @@ googlePlayServiceMap = "18.2.0"
 googlePlayServiceAdsIdentifier = "18.0.1"
 
 # Library
-javaxAnnotation = "1.0"
+javaxAnnotation = "1.0-20050927.133100"
 javaxInject = "1"
 
 # Rx
