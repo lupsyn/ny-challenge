@@ -36,7 +36,7 @@ composeViewModel = "2.7.0"
 composeIcons = "1.6.1"
 showkase = "1.0.2"
 detektComposeUiRules = "0.3.11"
-accompanistInset = "0.22.0-rc"
+accompanistInset = "0.30.1"
 ktx = "1.0.2"
 splashScreen = "1.0.1"
 
