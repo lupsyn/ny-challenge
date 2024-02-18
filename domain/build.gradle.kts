@@ -12,7 +12,5 @@ dependencies {
     implementation(libs.mulogging)
     implementation(libs.kotlinCoroutines)
 
-    testImplementation(libs.junit)
-//    testImplementation(libs.mockk)
-    testImplementation(libs.kotlinCoroutinesTest)
+    testImplementation(project(":libraries:test"))
 }

@@ -28,6 +28,8 @@ dependencies {
     implementation(libs.bundles.okHttp)
     implementation(libs.bundles.apolloBundle)
 
+    testImplementation(project(":libraries:test"))
+
     androidTestImplementation(libs.bundles.androidTest)
 
 }

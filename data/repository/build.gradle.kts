@@ -9,11 +9,7 @@ android {
 
 dependencies {
     implementation(projects.domain)
-
     implementation(libs.kotlinCoroutines)
 
-    testImplementation(libs.junit)
-    testImplementation(libs.mockitoCore)
-    testImplementation(libs.mockitoKotlin)
-//    testImplementation(Deps.test.mockitoInline)
+    testImplementation(project(":libraries:test"))
 }
