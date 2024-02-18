@@ -13,8 +13,7 @@ This code is based on my compose-template available here: https://github.com/lup
 - Compose UI
 - 100% Gradle Kotlin DSL setup.
 - CI Setup with GitHub Actions
-- Dependency versions managed via `buildSrc`.
-- Kotlin Static Analysis via `ktlint`
+- Dependency versions managed via `TOML`.
 - Issues Template (bug report + feature request).
 - Pull Request Template.
 
