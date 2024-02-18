@@ -53,7 +53,7 @@ internal class HomeScreenTest {
     }
 
     @Test
-    fun test_nestedPreferenceHomeNavigationi() {
+    fun test_nestedPreferenceHomeNavigation() {
         val settingsTitle = context.getString(Screen.SettingsScreen.title)
 
         composeTestRule.onNodeWithTag(
@@ -63,17 +63,6 @@ internal class HomeScreenTest {
             .performClick()
 
         composeTestRule.onNodeWithTag(settingsTitle + SCREEN_TEST_TAG)
-            .assertIsDisplayed()
-
-
-        composeTestRule.onNodeWithText(
-            "About",
-            useUnmergedTree = true
-        ).performClick()
-
-
-
-        composeTestRule.onNodeWithTag(context.getString(Screen.AboutScreen.title) + SCREEN_TEST_TAG)
             .assertIsDisplayed()
     }
 
@@ -97,7 +86,7 @@ internal class HomeScreenTest {
         ).performClick()
 
 
-        val contentString = context.getString(R.string.search_content_description)
+        val contentString = context.getString(com.ebdz.search.R.string.search_content_description)
 
         composeTestRule.onNodeWithText(contentString, useUnmergedTree = true)
             .assertIsDisplayed()

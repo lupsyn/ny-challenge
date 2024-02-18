@@ -9,6 +9,7 @@ import androidx.compose.animation.core.tween
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.PaddingValues
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
@@ -38,7 +39,6 @@ import com.ebdz.designsystem.blue700
 import com.ebdz.designsystem.components.Toolbar
 import com.ebdz.designsystem.lightGreen700
 import com.ebdz.preference.R
-import java.util.Locale
 
 /**
  * About screen.
@@ -48,16 +48,28 @@ fun AboutScreen(
     onUpPress: () -> Unit,
     modifier: Modifier = Modifier,
 ) {
+
     Scaffold(
-        modifier = modifier,
         topBar = { Toolbar(onUpPress = onUpPress) },
-        content = { AboutContent() }
+        content = { paddingValues ->
+            AboutContent(
+                paddingValues = paddingValues,
+                modifier = modifier
+            )
+        },
     )
 }
 
 @Composable
-private fun AboutContent() {
-    Column(modifier = Modifier.verticalScroll(rememberScrollState())) {
+private fun AboutContent(
+    paddingValues: PaddingValues = PaddingValues(),
+    modifier: Modifier = Modifier
+) {
+    Column(
+        modifier = modifier
+            .verticalScroll(rememberScrollState())
+            .padding(paddingValues)
+    ) {
         ContentHeader()
         Text(
             text = stringResource(id = R.string.about_description),
@@ -88,9 +100,9 @@ private fun ContentHeader() {
             .height(200.dp)
             .background(color = color)
     ) {
-        val appName = stringResource(id = R.string.app_name).lowercase(Locale.getDefault())
+//        val appName = stringResource(id = R.string.app_name).lowercase(Locale.getDefault())
         Text(
-            text = appName,
+            text = "appName",
             style = MaterialTheme.typography.h1.copy(color = MaterialTheme.colors.surface)
         )
     }

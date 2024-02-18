@@ -4,10 +4,10 @@ import com.ebdz.domain.model.Repository
 import com.ebdz.domain.usecase.GetListOfRepositoriesUseCase
 
 class GetListOfRepositoriesUseCaseFake : GetListOfRepositoriesUseCase {
-    var repositories: List<Repository>? = null
+    private var repositories: List<Repository>? = null
 
-    var throwError: Boolean = false
-    val anError = Throwable("Generic error")
+    private var throwError: Boolean = false
+    private val anError = Throwable("Generic error")
 
     fun returnDefaultValues() {
         repositories =

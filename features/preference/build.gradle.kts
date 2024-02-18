@@ -1,6 +1,11 @@
 plugins {
-    id(GradlePlugin.ANDROID_LIBRARY)
-    id(GradlePlugin.COMPOSE)
+    id("com.ebdz.com.gradleplugin.androidlibrary")
+    id("com.ebdz.com.gradleplugin.androidkotlin")
+    id("com.ebdz.com.gradleplugin.librarycompose")
+}
+
+android {
+    namespace = "com.ebdz.preference"
 }
 
 dependencies {
@@ -9,5 +14,6 @@ dependencies {
 
     testImplementation(projects.libraries.test)
 
-    androidTestImplementation(projects.libraries.test)
+    debugImplementation(libs.composeTestManifest)
+    androidTestImplementation(libs.bundles.androidTest)
 }

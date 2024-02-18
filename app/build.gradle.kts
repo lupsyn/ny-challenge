@@ -1,87 +1,30 @@
-import extensions.addComposeConfig
-import extensions.addComposeDependencies
-import extensions.addSingleDeviceTestOptions
-
 plugins {
-    id(GradlePlugin.ANDROID_APPLICATION)
-    id(GradlePlugin.KOTLIN_ANDROID)
-    id(GradlePlugin.PARCELIZE)
-}
-
-android {
-    compileSdk = Versions.compileSdk
-
-    defaultConfig {
-        minSdk = Versions.minSdk
-        targetSdk = Versions.targetSdk
-
-        applicationId = Releases.versionAppId
-        versionCode = Releases.versionCode
-        versionName = Releases.versionName
-
-        testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
-    }
-
-    buildFeatures {
-        viewBinding = true
-    }
-
-    compileOptions {
-        sourceCompatibility = JavaVersion.VERSION_11
-        targetCompatibility = JavaVersion.VERSION_11
-    }
-
-    kotlinOptions {
-        jvmTarget = JavaVersion.VERSION_11.toString()
-    }
-
-    buildTypes {
-        getByName("release") {
-            isMinifyEnabled = false
-            proguardFiles(
-                getDefaultProguardFile("proguard-android-optimize.txt"),
-                "proguard-rules.pro"
-            )
-        }
-    }
-
-    lint {
-        warningsAsErrors = true
-        abortOnError = false // Google needs to update their libraries to API Level 10.
-        htmlReport = true
-        checkDependencies = true
-
-        lintConfig = file("${rootDir}/config/filters/lint.xml")
-        htmlOutput = file("${buildDir}/reports/lint.html")
-    }
-
-    addComposeConfig()
-
-    kotlinOptions { jvmTarget = "11" }
-
-    addSingleDeviceTestOptions()
+    id("com.ebdz.com.gradleplugin.androidapplication")
+//    id("com.ebdz.com.gradleplugin.detekt")
+    id("com.ebdz.com.gradleplugin.di")
+    id("com.ebdz.com.gradleplugin.applicationcompose")
 }
 
 dependencies {
-    implementation(projects.libraries.core)
-    implementation(projects.libraries.designsystem)
-    implementation(projects.libraries.navigation)
-    implementation(projects.data.network)
-    implementation(projects.data.repository)
-    implementation(projects.domain)
+    implementation(project(":domain"))
 
-    implementation(Deps.logging)
-    implementation(Deps.compose.navigation)
-    implementation(Deps.compose.activity)
-    implementation(Deps.android.playCore)
-    implementation(Deps.koin.android)
-    implementation(Deps.android.splashScreen)
+    implementation(project(":data:repository"))
+    implementation(project(":data:network"))
 
-    addComposeDependencies()
+    implementation(project(":features:preference"))
+    implementation(project(":features:search"))
 
-    implementation(projects.features.preference)
-    implementation(projects.features.search)
+    implementation(project(":libraries:core"))
+    implementation(project(":libraries:test"))
+    implementation(project(":libraries:designsystem"))
+    implementation(project(":libraries:navigation"))
 
-    debugImplementation(Deps.compose.manifest)
+    implementation(libs.bundles.androidFramework)
+    implementation(libs.composeActivity)
+
+    implementation(libs.splashLibrary)
+    implementation(libs.koin)
+
+    debugImplementation(libs.composeTestManifest)
+    androidTestImplementation(libs.bundles.androidTest)
 }
-

@@ -1,17 +1,21 @@
 plugins {
-    id(GradlePlugin.ANDROID_LIBRARY)
-    id(GradlePlugin.COMPOSE)
-    id(GradlePlugin.PARCELIZE)
+    id("com.ebdz.com.gradleplugin.androidlibrary")
+    id("com.ebdz.com.gradleplugin.androidkotlin")
+    id("com.ebdz.com.gradleplugin.librarycompose")
+    id("com.ebdz.com.gradleplugin.di")
+}
+android {
+    namespace = "com.ebdz.search"
 }
 
 dependencies {
     implementation(projects.libraries.core)
     implementation(projects.libraries.designsystem)
     implementation(projects.domain)
-
-    implementation(Deps.android.playCore)
-    implementation(Deps.koin.android)
-    implementation(Deps.koin.compose)
+    implementation(libs.koinCompose)
 
     testImplementation(projects.libraries.test)
+
+    debugImplementation(libs.composeTestManifest)
+    androidTestImplementation(libs.bundles.androidTest)
 }

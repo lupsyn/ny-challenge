@@ -15,25 +15,25 @@ sealed class Screen(
     @StringRes val title: Int,
     val icon: ImageVector
 ) {
-    object HomeScreen : Screen(
+    data object HomeScreen : Screen(
         route = Destinations.Home,
         title = R.string.home,
         icon = Icons.Outlined.Home
     )
 
-    object SettingsScreen : Screen(
+    data object SettingsScreen : Screen(
         route = Destinations.Settings,
         title = R.string.settings,
         icon = Icons.Outlined.Settings
     )
 
-    object AboutScreen : Screen(
+    data object AboutScreen : Screen(
         route = Destinations.About,
         title = R.string.about,
         icon = Icons.Outlined.Settings
     )
 
-    object SearchScreen : Screen(
+    data object SearchScreen : Screen(
         route = Destinations.Search,
         title = R.string.search,
         icon = Icons.Outlined.Search

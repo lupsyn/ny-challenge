@@ -1,7 +1,8 @@
 plugins {
-    id(GradlePlugin.ANDROID_LIBRARY)
-    id(GradlePlugin.KAPT)
-    id(GradlePlugin.APOLLO)
+    id("com.ebdz.com.gradleplugin.androidlibrary")
+    id("com.ebdz.com.gradleplugin.androidkotlin")
+    id("com.ebdz.com.gradleplugin.di")
+    id("com.apollographql.apollo3")
 }
 
 apollo {
@@ -16,26 +17,19 @@ apollo {
     )
 }
 
+android {
+    namespace = "com.ebdz.network"
+}
+
 dependencies {
     implementation(projects.libraries.core)
     implementation(projects.data.repository)
 
-    implementation(Deps.coroutines.core)
+    implementation(libs.bundles.okHttp)
+    implementation(libs.bundles.apolloBundle)
 
-    implementation(Deps.koin.android)
+    testImplementation(project(":libraries:test"))
 
-    implementation(Deps.network.okHttp)
-    implementation(Deps.network.okHttpLoggingInterceptors)
-    implementation(Deps.network.apolloRuntime)
-    implementation(Deps.network.apolloHttCcache)
-    implementation(Deps.network.apolloNormalizedCache)
+    androidTestImplementation(libs.bundles.androidTest)
 
-    androidTestImplementation(Deps.test.runner)
-    androidTestImplementation(Deps.test.room)
-
-    testImplementation(Deps.coroutines.test)
-    testImplementation(Deps.test.junit)
-    testImplementation(Deps.test.mockk)
-    testImplementation(Deps.test.mockito)
-    testImplementation(Deps.test.mockitoInline)
 }

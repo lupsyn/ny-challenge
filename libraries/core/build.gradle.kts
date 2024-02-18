@@ -1,11 +1,17 @@
 plugins {
-    id(GradlePlugin.ANDROID_LIBRARY)
+    id("com.ebdz.com.gradleplugin.androidlibrary")
+    id("com.ebdz.com.gradleplugin.androidkotlin")
+    id("com.ebdz.com.gradleplugin.di")
+}
+
+android {
+    namespace = "com.ebdz.core"
 }
 
 dependencies {
-    implementation(Deps.android.ktx)
-    implementation(Deps.android.material)
-    implementation(Deps.android.splashScreen)
-    implementation(Deps.coroutines.core)
-    implementation(Deps.koin.android)
+    api("androidx.core:core-ktx:1.12.0")
+    api(libs.kotlinCoroutines)
+
+    api(libs.mulogging)
+    implementation(libs.koin)
 }
