@@ -41,7 +41,7 @@ ktx = "1.0.2"
 splashScreen = "1.0.1"
 
 #DI
-koin = "3.1.4"
+koin = "3.5.6"
 
 # Koil compose
 koilCompose = "2.5.0"
