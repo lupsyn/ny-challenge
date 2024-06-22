@@ -81,7 +81,7 @@ lottie = "6.3.0"
 muLogging = "3.0.5"
 
 # Utils
-jsonwebtoken = "0.11.5"
+jsonwebtoken = "0.12.6"
 pageIndicatorView = "1.0.3"
 
 # App health libraries
