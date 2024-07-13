@@ -97,7 +97,7 @@ mockitoCore = "5.10.0"
 mockitoKotlin = "1.6.0"
 mockWebServer = "4.12.0"
 kotlinTurbine = "0.12.1"
-truth = "1.4.0"
+truth = "1.4.4"
 
 # Instrumented tests
 espresso = "3.5.1"
