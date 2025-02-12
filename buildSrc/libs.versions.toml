@@ -26,7 +26,7 @@ detekt = "1.23.5"
 
 # Android Jetpack Compose
 composeCompiler = "1.5.9"
-compose = "1.6.1"
+compose = "1.7.8"
 composeMaterial = "1.6.1"
 composeLifecycle = "2.7.0"
 composeAnimation = "1.6.1"
